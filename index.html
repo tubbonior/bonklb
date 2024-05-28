@@ -141,10 +141,12 @@ main {
                 <h2>Classic</h2>
                 <div class="scrollable">
                     <ul>
-                        <li>TBD</li>
-                        <li>TBD</li>
-                        <li>TBD</li>
-                        <!-- More players can be added here -->
+                        <li>1. TBD</li>
+                        <li>2. TBD</li>
+                        <li>3. TBD</li>
+                        <li>4. TBD</li>
+                        <li>5. TBD</li>
+                      <!-- More players can be added here -->
                     </ul>
                 </div>
             </div>
@@ -152,9 +154,11 @@ main {
                 <h2>DA</h2>
                 <div class="scrollable">
                     <ul>
-                        <li>TBD</li>
-                        <li>TBD</li>
-                        <li>TBD</li>
+                        <li>1. TBD</li>
+                        <li>2. TBD</li>
+                        <li>3. TBD</li>
+                        <li>4. TBD</li>
+                        <li>5. TBD</li>
                         <!-- More players can be added here -->
                     </ul>
                 </div>
@@ -163,9 +167,11 @@ main {
                 <h2>Arrows</h2>
                 <div class="scrollable">
                     <ul>
-                        <li>TBD</li>
-                        <li>TBD</li>
-                        <li>TBD</li>
+                        <li>1. TBD</li>
+                        <li>2. TBD</li>
+                        <li>3. TBD</li>
+                        <li>4. TBD</li>
+                        <li>5. TBD</li>
                         <!-- More players can be added here -->
                     </ul>
                 </div>
@@ -174,9 +180,11 @@ main {
                 <h2>Grapple</h2>
                 <div class="scrollable">
                     <ul>
-                        <li>TBD</li>
-                        <li>TBD</li>
-                        <li>TBD</li>
+                        <li>1. TBD</li>
+                        <li>2. TBD</li>
+                        <li>3. TBD</li>
+                        <li>4. TBD</li>
+                        <li>5. TBD</li>
                         <!-- More players can be added here -->
                     </ul>
                 </div>
@@ -185,9 +193,11 @@ main {
                 <h2>Football</h2>
                 <div class="scrollable">
                     <ul>
-                        <li>TBD</li>
-                        <li>TBD</li>
-                        <li>TBD</li>
+                        <li>1. TBD</li>
+                        <li>2. TBD</li>
+                        <li>3. TBD</li>
+                        <li>4. TBD</li>
+                        <li>5. TBD</li>
                         <!-- More players can be added here -->
                     </ul>
                 </div>
@@ -199,21 +209,21 @@ main {
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const leaderboards = [
-        { topic: 'Classic', players: [{ name: 'TBD', score: 100 }, { name: 'TBD', score: 90 }, { name: 'TBD', score: 80 }] },
-        { topic: 'DA', players: [{ name: 'TBD', score: 100 }, { name: 'TBD', score: 90 }, { name: 'TBD', score: 80 }] },
-        { topic: 'Arrows', players: [{ name: 'TBD', score: 100 }, { name: 'TBD', score: 90 }, { name: 'TBD', score: 80 }] },
-        { topic: 'Grapple', players: [{ name: 'TBD', score: 100 }, { name: 'TBD', score: 90 }, { name: 'TBD', score: 80 }] },
-        { topic: 'Football', players: [{ name: 'TBD', score: 100 }, { name: 'TBD', score: 90 }, { name: 'TBD', score: 80 }] }
+        { topic: 'Classic', players: [{position: '1', name: 'TBD', score: 100 }, {position: '2', name: 'TBD', score: 90 }, {position: '3', name: 'TBD', score: 80 }, {position: '4', name: 'TBD', score: 80 }, {position: '5', name: 'TBD', score: 80 }] },
+        { topic: 'DA', players: [{position: '1', name: 'TBD', score: 100 }, {position: '2', name: 'TBD', score: 90 }, {position: '3', name: 'TBD', score: 80 }, {position: '4', name: 'TBD', score: 80 }, {position: '5', name: 'TBD', score: 80 }] },
+        { topic: 'Arrows', players: [{position: '1', name: 'TBD', score: 100 }, {position: '2', name: 'TBD', score: 90 }, {position: '3', name: 'TBD', score: 80 }, {position: '4', name: 'TBD', score: 80 }, {position: '5', name: 'TBD', score: 80 }] },
+        { topic: 'Grapple', players: [{position: '1',name: 'TBD', score: 100 }, {position: '2',name: 'TBD', score: 90 }, {position: '3',name: 'TBD', score: 80 }, {position: '4', name: 'TBD', score: 80 }, {position: '5', name: 'TBD', score: 80 }] },
+        { topic: 'Football', players: [{position: '1', name: 'TBD', score: 100 }, {position: '2', name: 'TBD', score: 90 }, {position: '3', name: 'TBD', score: 80 }, {position: '4', name: 'TBD', score: 80 }, {position: '5', name: 'TBD', score: 80 }] }
     ];
 
-    const leaderboardContainer = document.getElementById('leaderboards');
+   const leaderboardContainer = document.getElementById('leaderboards');
     
     leaderboardContainer.innerHTML = leaderboards.map(lb => `
         <div class="leaderboard">
             <h2>${lb.topic}</h2>
             <div class="scrollable">
                 <ul>
-                    ${lb.players.map(player => `<li>${player.name}</li>`).join('')}
+                    ${lb.players.map(player => `<li>${player.position} - ${player.name}</li>`).join('')}
                 </ul>
             </div>
         </div>
